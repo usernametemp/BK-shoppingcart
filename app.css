@@ -182,6 +182,7 @@ hr{
     position: relative;
     text-decoration: none;
     display:inline-block;
+    border-radius: 1em;
     
   }
   .btnClose {
