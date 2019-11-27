@@ -4,98 +4,95 @@
         <title>SHopping-cart</title>
         <meta charset="utf-8">
         <meta name="viewport" content="width=device-width, initial-scale=1">
-        <link rel="stylesheet" href="../bootstrap-4.3.1-dist/css/bootstrap.min.css">
-        <script src="../../../../node_modules/jquery/dist/jquery.js"></script>
-        <script src="../../../../node_modules/popper.js/dist/popper.min.js"></script>
-        <script src="../bootstrap-4.3.1-dist/js/bootstrap.min.js"></script>
-        <link rel="stylesheet" href="../../../../node_modules/animate.css/animate.min.css"/>
-        <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.0/css/all.css"
-        integrity="sha384-lZN37f5QGtY3VHgisS14W3ExzMWZxybE1SJSEsQp9S+oqd12jhcu+A56Ebc1zFSJ" crossorigin="anonymous" type="text/css">
-    </head>
-    <style>
-        body{
-            background-color: rgb(252, 101, 0);
-            font-family: Arial, Helvetica, sans-serif;
-            font-weight: 500;
-            font-size:16px;
-        }
-        .container{
-            background-color:unset;
-            background-color:#ffffff;
-            width: 60%;
-            border-radius: 1em;
-            border: 0.1em solid rgb(71, 70, 70);
-        }
-        #prices #price1,#prices #price2,#exclusive,#colorlabel,#sizeGuide,#customFit,#details #header,#help,#shipping{
-            padding:1em 5em 1em 3em 
-        }
-        #headers{
-            font-size: 2em;
-            font-weight: 800;
-            opacity: 0.9;
-            padding: 1em 0 1em 1em;
-        }
-        #ratings ul li{
-            float: left;
-            list-style-type: none;
-            margin: 0 0.3em;
-        }
-        #reviews{
-            margin-left:10em;
-        }
-        #prices{
-            padding-top: 1em;
-        }
-        #prices #price1{
-        }
-        #prices #price2{
-        }
-        #discount{
-            font-weight: 900;
-        }
-        #exclusive{
-        }
-        .color{
-            background-color: black;
-            width: 2em;
-            height: 2em;
-            border-radius: 50%;
-            margin: 0 0.5em;
-        }
-        #colorlabel{
-            font-weight: 900;
-        }
-        #sizeGuide{
-            clear: left;
-        }
-        #customFit{
-        }
-        #details{
-            padding-bottom: 1em;
-        }
-        #details #header{
-            padding-bottom: 1em;
-        }
-        #colors ul li{
-            float: left;
-            list-style-type: none;
-        }
-        #details ul li{
-            float:left;
-            list-style-type: none;            
-        }
-        #help{
-            clear: left;
-
-        }
-        hr{
-            clear: left;
-            background-color: black;
-        }
         
-    </style>
+        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" type="text/css">
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"></script>
+        <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"></script>
+        <link rel='stylesheet' href='https://cdnjs.cloudflare.com/ajax/libs/animate.css/3.5.2/animate.min.css'>
+        
+        <!--CDN-->
+        <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.0/css/all.css"
+            integrity="sha384-lZN37f5QGtY3VHgisS14W3ExzMWZxybE1SJSEsQp9S+oqd12jhcu+A56Ebc1zFSJ" crossorigin="anonymous" type="text/css">
+        <link href="https://fonts.googleapis.com/css?family=Libre+Baskerville|Staatliches&display=swap" rel="stylesheet" type="text/css">
+        <link rel="stylesheet" type="text/css" href="./app.css">    
+        <script src="http://ajax.googleapis.com/ajax/libs/jquery/2.0.3/jquery.min.js"></script>
+        <script src="http://www.jqueryscript.net/demo/jQuery-Plugin-For-Water-Ripple-Animation-ripples/js/jquery.ripples.js">
+        </script>
+        
+
+    </head>
     <body>
-        <div class="container" style="margin-top:100px">
+        <div class="container demo" style="margin-top:100px">
+        <!--help modal start-->
+        <div class="modal left fade" id="helpModal" tabindex="-1" role="dialog" aria-labelledby="helpModalLabel" aria-hidden="true">
+            <div class="modal-dialog" role="document">
+                <div class="modal-content">
+                    <div class="modal-header">
+                        Instructions
+                    </div>
+                    <div class="modal-body">
+                    <div class="row">
+                        <div class="col-lg-12">
+                            <div class="accordion" id="accordionExample">
+                            <div class="card">
+                                <div class="card-header" id="headingOne">
+                                <h2 class="clearfix mb-0">
+                                    <a class="btn btn-link" data-toggle="collapse" data-target="#collapseOne" aria-expanded="true" aria-controls="collapseOne"><i class="fa fa-chevron-circle-down"></i>Choosing a color</a>									
+                                </h2>
+                                </div>
+                                <div id="collapseOne" class="collapse show" aria-labelledby="headingOne" data-parent="#accordionExample">
+                                <div class="card-body">
+                                    Simply press on the color that you want, followed by presing "Add to cart" Button
+                                </div>
+                                </div>
+                            </div>
+                            <div class="card">
+                                <div class="card-header" id="headingTwo">
+                                <h2 class="mb-0">
+                                    <a class="btn btn-link collapsed" data-toggle="collapse" data-target="#collapseTwo" aria-expanded="false" aria-controls="collapseTwo"><i class="fa fa-chevron-circle-down"></i> Selecting amount</a>
+                                </h2>
+                                </div>
+                                <div id="collapseTwo" class="collapse" aria-labelledby="headingTwo" data-parent="#accordionExample">
+                                <div class="card-body">
+                                    After selecting a color, a modal should pop up and prompt you to specifiy the amount of the select color.
+                                    Just press "+" too add or "-" to decrease the amount.
+                                    Then press "agree" to confirm or else "can" to drop out
+                                </div>
+                                </div>
+                            </div>
+                            <div class="card">
+                                <div class="card-header" id="headingThree">
+                                <h2 class="mb-0">
+                                    <a class="btn btn-link collapsed" data-toggle="collapse" data-target="#collapseThree" aria-expanded="false" aria-controls="collapseThree"><i class="fa fa-chevron-circle-down"></i>After collecting colors</a>                     
+                                </h2>
+                                </div>
+                                <div id="collapseThree" class="collapse" aria-labelledby="headingThree" data-parent="#accordionExample">
+                                <div class="card-body">YAfter collecting all the color(s) that you like, press "check out now" button chekout all the cart from the cart</div>
+                                </div>
+                            </div>
+        
+                            <div class="card">
+                                <div class="card-header" id="headingFour">
+                                <h2 class="mb-0">
+                                    <a class="btn btn-link collapsed" data-toggle="collapse" data-target="#collapseFour" aria-expanded="false" aria-controls="collapseFour"><i class="fa fa-chevron-circle-down"></i> How do you checkout color(s) ?</a>                               
+                                </h2>
+                                </div>
+                                <div id="collapseFour" class="collapse" aria-labelledby="headingFour" data-parent="#accordionExample">
+                                <div class="card-body">After Choosing color(s) and their corresponding quantity, then press "Checkout".</div>
+                                </div>
+                            </div>
+                            </div>
+                        </div>
+                        </div>
+                    </div>
+                    <div class="modal-footer">
+                        <button type="button" class="btnClose" data-dismiss="modal">Close</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!--help modal end-->
             <div id="headers">HICKIES Originals</div>
             <div id="ratings">
                 <ul>
@@ -136,9 +133,9 @@
                 </ul>
             </div>
             <hr>
-            <div id="help">Need Help ?</div>
+            <a id="help" href="#helpModal" class="size-8 fade-1 bold-4 camelCase" data-toggle="modal" data-target="#helpModal" style="color:#333" data-backdrop="true">need help?</a>
             <div id="shipping">Shipping & Returns</div>
-        </div>
+    </div>
         <script src="./app.js"></script>
     </body>
 </html>
