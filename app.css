@@ -174,7 +174,6 @@ hr{
 .btnClose{
     padding: 15px 100px;
     margin:10px 4px;
-    color: #fff;
     background-color: #6098FF;
     font-family: sans-serif;
     text-transform: uppercase;
@@ -215,6 +214,7 @@ hr{
   .btnClose:hover {
       box-shadow: inset 00px 100px 0px 0px #e73cc2;
       color: #ffffff;
+      color: #fff;
   }
   
 
