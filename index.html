@@ -1,7 +1,7 @@
 <!Doctype html>
 <html>
     <head>
-        <title>SHopping-cart</title>
+        <title>Shopping-cart</title>
         <meta charset="utf-8">
         <meta name="viewport" content="width=device-width, initial-scale=1">
         
@@ -11,14 +11,21 @@
         <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"></script>
         <link rel='stylesheet' href='https://cdnjs.cloudflare.com/ajax/libs/animate.css/3.5.2/animate.min.css'>
         
+        <!--CDN-->
         <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.0/css/all.css"
             integrity="sha384-lZN37f5QGtY3VHgisS14W3ExzMWZxybE1SJSEsQp9S+oqd12jhcu+A56Ebc1zFSJ" crossorigin="anonymous" type="text/css">
         <link href="https://fonts.googleapis.com/css?family=Libre+Baskerville|Staatliches&display=swap" rel="stylesheet" type="text/css">
-        <link rel="stylesheet" type="text/css" href="./app.css">            
+        <link rel="stylesheet" type="text/css" href="./app.css">    
+        <script src="http://ajax.googleapis.com/ajax/libs/jquery/2.0.3/jquery.min.js"></script>
+        <script src="http://www.jqueryscript.net/demo/jQuery-Plugin-For-Water-Ripple-Animation-ripples/js/jquery.ripples.js"></script>
+	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/css/bootstrap.min.css">
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+	<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/js/bootstrap.min.js"></script>
+        
 
     </head>
     <body>
-        <div class="container demo" style="margin-top:100px">
+        <div class="container demo" style="margin-top:50px">
         <!--help modal start-->
         <div class="modal left fade" id="helpModal" tabindex="-1" role="dialog" aria-labelledby="helpModalLabel" aria-hidden="true">
             <div class="modal-dialog" role="document">
@@ -52,7 +59,7 @@
                                 <div class="card-body">
                                     After selecting a color, a modal should pop up and prompt you to specifiy the amount of the select color.
                                     Just press "+" too add or "-" to decrease the amount.
-                                    Then press "agree" to confirm or else "cancel" to drop out
+                                    Then press "agree" to confirm or else "can" to drop out
                                 </div>
                                 </div>
                             </div>
@@ -63,7 +70,7 @@
                                 </h2>
                                 </div>
                                 <div id="collapseThree" class="collapse" aria-labelledby="headingThree" data-parent="#accordionExample">
-                                <div class="card-body">After collecting all the color(s) that you like, press "check out now" button chekout all the cart from the cart</div>
+                                <div class="card-body">YAfter collecting all the color(s) that you like, press "check out now" button chekout all the cart from the cart</div>
                                 </div>
                             </div>
         
@@ -89,47 +96,117 @@
         </div>
         <!--help modal end-->
             <div id="headers">HICKIES Originals</div>
-            <div id="ratings">
-                <ul>
-                    <li><i class="fas fa-star size-5 fade-1"></i></li>
-                    <li><i class="fas fa-star size-5 fade-1"></i></li>
-                    <li><i class="fas fa-star size-5 fade-1"></i></li>
-                </ul>
-                <div id="reviews"> 1,2934 Reviews</div>
+	    <div class ="row">
+		<div class="col-xs-5">
+		        <ul class="stars">
+		            <li><i class="fas fa-star size-5 fade-1"></i></li>
+		            <li><i class="fas fa-star size-5 fade-1"></i></li>
+		            <li><i class="fas fa-star size-5 fade-1"></i></li>
+			    <li><i class="fas fa-star size-5 fade-1"></i></li>
+			    <li><i class="fas fa-star size-5 fade-1"></i></li>
+		        </ul>
+		</div>
+		<div class="col-xs-7">
+		        <div class="reviews">1,293 Reviews</div>
+		</div>
+	    </div>
+            <div class="row">
+		<div class="col-xs-5">
+                	<p class="price1">$14.99</p>
+		</div>
+		<div class="col-xs-3">
+                	<p class="price2">$17.99</p>
+		</div>
+		<div class="col-xs-4">
+                	<p class="discount">25.00% OFF</p>
+		</div>
             </div>
-            <div id="prices">
-                <span id="price1">$14.99</span>
-                <span id="price2">$17.99</span>
-                <span id="discount">25.00% OFF</span>
-            </div>
-            <div id="exclusive">ONLINE EXCLUSIVE</div>
-            <div id="colorlabel">
-                <span>COLOR</span>
-                <span id="colorname"></span>
-            </div>
+            <p class="online">ONLINE EXCLUSIVE</p>
+
+            <p><b>COLOR:</b><span id="colorname" class="colorname"></span>Electric Red</p>
+
             <div id="colors">
                 <ul>
-                    <li class="box"><div class=" color colorButton"></div></li>
-                    <li class="box"><div class="color colorButton"></div></li>
+                    <li class="box"><div class=" color colorButton" style="background-color: #ab2b1a"></div></li>
+                    <li class="box"><div class="color colorButton" style="background-color: #5077d9"></div></li>
+		    <li class="box"><div class=" color colorButton" style="background-color: black"></div></li>
+                    <li class="box"><div class="color colorButton" style="background-color: #e4e7f0"></div></li>
+		    <li class="box"><div class=" color colorButton" style="background-color: #ff9a26"></div></li>
+                    <li class="box"><div class="color colorButton" style="background-color: #fce700"></div></li>
+		    <li class="box"><div class=" color colorButton" style="background-color: #5c4b96"></div></li>
+                    <li class="box"><div class="color colorButton" style="background-color: #443f54"></div></li>
+                    <li class="box"><div class=" color colorButton" style="background-color: #ffac69"></div></li>
+                    <li class="box"><div class="color colorButton" style="background-color: #00ccff"></div></li>
+		    <li class="box"><div class=" color colorButton" style="background-color: #8cff40"></div></li>
+                    <li class="box"><div class="color colorButton" style="background-color: #ff12c8"></div></li>
+		    <li class="box"><div class=" color colorButton" style="background-color: #a37d15"></div></li>
+                    <li class="box"><div class="color colorButton" style="background-color: #006b2e"></div></li>
+		    <li class="box"><div class=" color colorButton" style="background-color: #6c706e"></div></li>
+                    <li class="box"><div class="color colorButton" style="background-color: #856525"></div></li>
+		    <li class="box"><div class=" color colorButton" style="background-color: #3bffeb"></div></li>
+                    <li class="box"><div class="color colorButton" style="background-color: #a8a8a8"></div></li>
                 </ul>
             </div>
-            <div id="sizeGuide">Size Guide</div>
-            <div id="customFit">Your Cutom Fit</div>
+            <p id="sizeGuide">Size Guide</p>
+            <p id="customFit">Your Custom Fit</p>
             <div id="cart">
                 <div id="quantity"></div>
                 <div id="addToCartButton"></div>
             </div>
-            <hr>
+	
+	    <div class="row">
+			<div class="col-sm-6">
+				<div class="quantity"><b>0</b></div>
+			</div>
+			<div class="col-sm-6">
+				<div class="cart" data-toggle="modal" data-target="#myModal"><b>Add to Cart</b></div>
+			</div>
+	    </div>
+	  <!-- Modal -->
+	  <div class="modal fade" id="myModal" role="dialog">
+	    <div class="modal-dialog">
+	    
+	      <!-- Modal content-->
+	      <div class="modal-content">
+		<div>
+		  <button type="button" class="close" data-dismiss="modal" style="float:right;">&times;</button>
+		  <p>Please add the quantity of the Item you have selected</p>
+		</div>
+		<div class="modal-body">
+			<ul>
+				  <li><img src="icons/add.png" width="50px" height="50px"></li>
+				  <li><p>0</p></li>
+				  <li><img src="icons/minus.png" width="50px" height="50px"></li>
+				  <li><p>Electric Red</p></li>
+			</ul>
+		</div>
+		<div class="modal-footer">
+		  <button type="button" class="btn btn-default">Agree</button>
+		  <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+		</div>
+	      </div>
+	      
+	    </div>
+	  </div>
+            
+	    <hr>
+
             <div id="details">
-                <div id='header'>DETAILS</div>
+                <p id="header">DETAILS</p>
                 <ul>
                     <li class="box"><div class="color"></div></li>
                     <li class="box"><div class="color"></div></li>
                 </ul>
             </div>
+	
+	    <br/>
             <hr>
-            <a id="help" href="#helpModal" class="size-8 fade-1 bold-4 camelCase" data-toggle="modal" data-target="#helpModal" style="color:#333" data-backdrop="true">need help?</a>
-            <div id="shipping">Shipping & Returns</div>
+
+            <a id="help" href="#helpModal" class="size-8 fade-1 bold-4 camelCase" data-toggle="modal" data-target="#helpModal" style="color:#333" data-backdrop="true">Need help?</a>
+	    <br/>
+            <p id="shipping">Shipping & Returns</p>
+
+    </div>
     </div>
         <script src="./app.js"></script>
     </body>
