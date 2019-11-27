@@ -1,0 +1,144 @@
+<!Doctype html>
+<html>
+    <head>
+        <title>SHopping-cart</title>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <link rel="stylesheet" href="../bootstrap-4.3.1-dist/css/bootstrap.min.css">
+        <script src="../../../../node_modules/jquery/dist/jquery.js"></script>
+        <script src="../../../../node_modules/popper.js/dist/popper.min.js"></script>
+        <script src="../bootstrap-4.3.1-dist/js/bootstrap.min.js"></script>
+        <link rel="stylesheet" href="../../../../node_modules/animate.css/animate.min.css"/>
+        <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.0/css/all.css"
+        integrity="sha384-lZN37f5QGtY3VHgisS14W3ExzMWZxybE1SJSEsQp9S+oqd12jhcu+A56Ebc1zFSJ" crossorigin="anonymous" type="text/css">
+    </head>
+    <style>
+        body{
+            background-color: rgb(252, 101, 0);
+            font-family: Arial, Helvetica, sans-serif;
+            font-weight: 500;
+            font-size:16px;
+        }
+        .container{
+            background-color:unset;
+            background-color:#ffffff;
+            width: 60%;
+            border-radius: 1em;
+            border: 0.1em solid rgb(71, 70, 70);
+        }
+        #prices #price1,#prices #price2,#exclusive,#colorlabel,#sizeGuide,#customFit,#details #header,#help,#shipping{
+            padding:1em 5em 1em 3em 
+        }
+        #headers{
+            font-size: 2em;
+            font-weight: 800;
+            opacity: 0.9;
+            padding: 1em 0 1em 1em;
+        }
+        #ratings ul li{
+            float: left;
+            list-style-type: none;
+            margin: 0 0.3em;
+        }
+        #reviews{
+            margin-left:10em;
+        }
+        #prices{
+            padding-top: 1em;
+        }
+        #prices #price1{
+        }
+        #prices #price2{
+        }
+        #discount{
+            font-weight: 900;
+        }
+        #exclusive{
+        }
+        .color{
+            background-color: black;
+            width: 2em;
+            height: 2em;
+            border-radius: 50%;
+            margin: 0 0.5em;
+        }
+        #colorlabel{
+            font-weight: 900;
+        }
+        #sizeGuide{
+            clear: left;
+        }
+        #customFit{
+        }
+        #details{
+            padding-bottom: 1em;
+        }
+        #details #header{
+            padding-bottom: 1em;
+        }
+        #colors ul li{
+            float: left;
+            list-style-type: none;
+        }
+        #details ul li{
+            float:left;
+            list-style-type: none;            
+        }
+        #help{
+            clear: left;
+
+        }
+        hr{
+            clear: left;
+            background-color: black;
+        }
+        
+    </style>
+    <body>
+        <div class="container" style="margin-top:100px">
+            <div id="headers">HICKIES Originals</div>
+            <div id="ratings">
+                <ul>
+                    <li><i class="fas fa-star size-5 fade-1"></i></li>
+                    <li><i class="fas fa-star size-5 fade-1"></i></li>
+                    <li><i class="fas fa-star size-5 fade-1"></i></li>
+                </ul>
+                <div id="reviews"> 1,2934 Reviews</div>
+            </div>
+            <div id="prices">
+                <span id="price1">$14.99</span>
+                <span id="price2">$17.99</span>
+                <span id="discount">25.00% OFF</span>
+            </div>
+            <div id="exclusive">ONLINE EXCLUSIVE</div>
+            <div id="colorlabel">
+                <span>COLOR</span>
+                <span id="colorname"></span>
+            </div>
+            <div id="colors">
+                <ul>
+                    <li class="box"><div class=" color colorButton"></div></li>
+                    <li class="box"><div class="color colorButton"></div></li>
+                </ul>
+            </div>
+            <div id="sizeGuide">Size Guide</div>
+            <div id="customFit">Your Cutom Fit</div>
+            <div id="cart">
+                <div id="quantity"></div>
+                <div id="addToCartButton"></div>
+            </div>
+            <hr>
+            <div id="details">
+                <div id='header'>DETAILS</div>
+                <ul>
+                    <li class="box"><div class="color"></div></li>
+                    <li class="box"><div class="color"></div></li>
+                </ul>
+            </div>
+            <hr>
+            <div id="help">Need Help ?</div>
+            <div id="shipping">Shipping & Returns</div>
+        </div>
+        <script src="./app.js"></script>
+    </body>
+</html>
