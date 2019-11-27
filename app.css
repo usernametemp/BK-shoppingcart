@@ -114,7 +114,6 @@ hr{
 
 .modal.left .modal-content {
 	height: 100%;
-    overflow-y: auto;
     background: #acb6e5;
     background: -webkit-linear-gradient(45deg, #86fde8, #acb6e5);
     background: linear-gradient(45deg, #86fde8, #acb6e5);
